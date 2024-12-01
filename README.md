@@ -1,8 +1,8 @@
 <p align="center">
-    <p>Advent of Code</p>
+    <p align="center">Advent of Code</p>
 </p>
 <p align="center"><h1 align="center">AOC</h1></p>
-d<p align="center">
+<p align="center">
 	<img src="https://img.shields.io/github/license/zsoltdzsugan/aoc?style=default&logo=opensourceinitiative&logoColor=white&color=00f2ff" alt="license">
 	<img src="https://img.shields.io/github/last-commit/zsoltdzsugan/aoc?style=default&logo=git&logoColor=white&color=00f2ff" alt="last-commit">
 	<img src="https://img.shields.io/github/languages/top/zsoltdzsugan/aoc?style=default&color=00f2ff" alt="repo-top-language">
