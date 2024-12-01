@@ -25,15 +25,10 @@ var showSolutionCmd = &cobra.Command{
 }
 
 func init() {
-	showSolutionCmd.Flags().IntP("part", "p", 0, "part of the solution [1-2]")
-	showSolutionCmd.MarkFlagRequired("part")
-
 	rootCmd.AddCommand(showSolutionCmd)
 }
 
 func showSolution(cmd *cobra.Command, args []string) {
-	part, _ := cmd.Flags().GetInt("part")
-
 	// Build the solution file path
 	yearDir := fmt.Sprintf("year%d", year)
 	dayDir := fmt.Sprintf("day%d", day)
