@@ -33,5 +33,4 @@ func init() {
 
 	rootCmd.MarkFlagRequired("year")
 	rootCmd.MarkFlagRequired("day")
-	rootCmd.MarkFlagRequired("part")
 }

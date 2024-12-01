@@ -22,6 +22,7 @@ var showChallengeCmd = &cobra.Command{
 }
 
 func init() {
+	rootCmd.MarkFlagRequired("part")
 	rootCmd.AddCommand(showChallengeCmd)
 }
 

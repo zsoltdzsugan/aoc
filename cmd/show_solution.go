@@ -25,6 +25,7 @@ var showSolutionCmd = &cobra.Command{
 }
 
 func init() {
+	rootCmd.MarkFlagRequired("part")
 	rootCmd.AddCommand(showSolutionCmd)
 }
 
