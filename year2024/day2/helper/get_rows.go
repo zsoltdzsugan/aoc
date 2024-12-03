@@ -5,7 +5,7 @@ import (
 )
 
 func GetRows() [][]int {
-	data := txtreader.OpenFile("../puzzle.txt")
+	data := txtreader.OpenFile("../puzzle.input")
 
 	var result [][]int
 

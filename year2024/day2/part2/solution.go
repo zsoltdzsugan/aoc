@@ -1,10 +1,17 @@
-package main
+package day2
 
 import (
 	"fmt"
 
 	"github.com/zsoltdzsugan/aoc/year2024/day2/helper"
 )
+
+func Main() {
+	data := helper.GetRows()
+
+	safeCount := countSafeReportsWithDampener(data)
+	fmt.Printf("Number of safe reports: %d\n", safeCount)
+}
 
 // Checks if a report is safe using the original rules.
 func isSafe(report []int) bool {
@@ -59,11 +66,4 @@ func countSafeReportsWithDampener(data [][]int) int {
 	}
 
 	return safeCount
-}
-
-func main() {
-	data := helper.GetRows()
-
-	safeCount := countSafeReportsWithDampener(data)
-	fmt.Printf("Number of safe reports: %d\n", safeCount)
 }

@@ -6,6 +6,13 @@ import (
 	"github.com/zsoltdzsugan/aoc/year2024/day2/helper"
 )
 
+func main() {
+	data := helper.GetRows()
+
+	safeCount := countSafeReports(data)
+	fmt.Printf("Number of safe reports: %d\n", safeCount)
+}
+
 func isSafe(report []int) bool {
 	if len(report) < 2 {
 		return false
@@ -39,11 +46,4 @@ func countSafeReports(data [][]int) int {
 	}
 
 	return safeCount
-}
-
-func main() {
-	data := helper.GetRows()
-
-	safeCount := countSafeReports(data)
-	fmt.Printf("Number of safe reports: %d\n", safeCount)
 }

@@ -1,23 +1,51 @@
 package helper
 
 import (
-	"slices"
-
-	txtreader "github.com/zsoltdzsugan/aoc/txt_reader"
+	"fmt"
+	"os"
+	"sort"
+	"strconv"
+	"strings"
 )
 
 func SortData() (x, y []int) {
-	data := txtreader.OpenFile("../puzzle.txt")
+	data, err := os.ReadFile("../puzzle.input")
+	if err != nil {
+		fmt.Println("Couldn't open file:", err)
+		return nil, nil
+	}
 
 	var leftList []int
 	var rightList []int
-	for _, row := range data {
-		leftList = append(leftList, row[0].(int))
-		rightList = append(rightList, row[1].(int))
+	lines := strings.Split(string(data), "\n")
+	for _, line := range lines {
+		if strings.TrimSpace(line) == "" {
+			continue
+		}
+
+		parts := strings.Fields(line)
+		if len(parts) < 2 {
+			fmt.Println("Invalid line format:", line)
+			continue
+		}
+
+		left, err := strconv.Atoi(parts[0])
+		if err != nil {
+			fmt.Println("Error parsing left value:", err)
+			continue
+		}
+		right, err := strconv.Atoi(parts[1])
+		if err != nil {
+			fmt.Println("Error parsing right value:", err)
+			continue
+		}
+
+		leftList = append(leftList, left)
+		rightList = append(rightList, right)
 	}
 
-	slices.Sort(leftList)
-	slices.Sort(rightList)
+	sort.Ints(leftList)
+	sort.Ints(rightList)
 
 	return leftList, rightList
 }
