@@ -226,5 +226,16 @@ Run aoc using the following command:
 **Using `go modules`** &nbsp; [<img align="center" src="https://img.shields.io/badge/Go-00ADD8.svg?style={badge_style}&logo=go&logoColor=white" />](https://golang.org/)
 
 ```sh
-❯ ./aoc
+❯ aoc
+```
+### Example
+Run aoc with flags. Show Challenge or Solution requires all 3 flags while puzzle input only needs year and day.
+```sh
+❯ aoc challenge -y 2024 -d 1 -p 1 // --year 2024 --day 1 --part 1 also works
+```
+```sh
+❯ aoc solution -y 2024 -d 1 -p 1
+```
+```sh
+❯ aoc puzzle -y 2024 -d 1
 ```
