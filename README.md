@@ -25,6 +25,7 @@
   - [ Prerequisites](#-prerequisites)
   - [ Installation](#-installation)
   - [ Usage](#-usage)
+  - [ Example](#-example)
 
 ---
 
